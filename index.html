@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>杨玉宽 (Yang Yukuan) | 学术主页 | 中国科学院软件研究所</title>
+    <meta name="description" content="杨玉宽，中国科学院软件研究所副研究员。研究方向：具身智能、世界模型、自动驾驶、软件工程大模型等。" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c5aa0;
+            --primary-dark: #1e3f7a;
+            --primary-light: #4a7bc8;
+            --secondary: #e63946;
+            --accent: #2a9d8f;
+            --light: #ffffff;
+            --light-gray: #f8f9fa;
+            --gray: #e9ecef;
+            --medium-gray: #6c757d;
+            --dark-gray: #495057;
+            --dark: #212529;
+            --text-dark: #212529;
+            --text-medium: #495057;
+            --text-light: #6c757d;
+            --border-radius: 12px;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 25px 0;
+            position: relative;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray);
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            color: var(--primary-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-medium);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 100px;
+            background: #ffffff; /* 改为纯白色 */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(44, 90, 160, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        .hero-text h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .hero-text .title {
+            font-size: 1.2rem;
+            color: var(--text-medium);
+            margin-bottom: 25px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-text .title i {
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--text-medium);
+            max-width: 700px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(44, 90, 160, 0.05) 0%, rgba(42, 157, 143, 0.05) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .highlight-box i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box, .highlight-box * {
+            color: var(--text-dark);
+        }
+
+        .recruitment-box {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.08) 0%, rgba(44, 90, 160, 0.05) 100%);
+            border-left: 4px solid var(--secondary);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin: 35px 0;
+            position: relative;
+            border: 1px solid rgba(230, 57, 70, 0.2);
+        }
+
+        .recruitment-box h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .recruitment-box ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .recruitment-box li {
+            margin-bottom: 8px;
+        }
+
+        .hero-profile {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .hero-profile:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 5px solid var(--light);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .profile-title {
+            text-align: center;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .profile-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: rgba(44, 90, 160, 0.08);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background: rgba(44, 90, 160, 0.15);
+        }
+
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .profile-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid var(--gray);
+        }
+
+        .profile-links a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 100px;
+        }
+
+        .section-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-top: 20px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-light);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .card-content {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            background: var(--light);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 30px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--light);
+            z-index: 1;
+            box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.2);
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .timeline-subtitle {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Publications */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .publication-item {
+            padding: 30px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent);
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .publication-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .publication-title {
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        .publication-authors {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .publication-venue {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(44, 90, 160, 0.08);
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 35px 20px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .stat-meta {
+            color: var(--text-medium);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Research Areas */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .area-item {
+            padding: 35px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid transparent;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .area-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--primary);
+        }
+
+        .area-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .area-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .area-item .card-content {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* 招生招聘部分 - 修改为全宽卡片 */
+        .recruitment-full-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray);
+            transition: var(--transition);
+            text-align: center;
+            width: 100%;
+        }
+
+        .recruitment-full-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-light);
+        }
+
+        .recruitment-full-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid rgba(44, 90, 160, 0.1);
+        }
+
+        .recruitment-content {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .recruitment-content h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .recruitment-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .recruitment-content ul {
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        .recruitment-content li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .recruitment-content p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .recruitment-content strong {
+            color: var(--primary);
+        }
+
+        .email-contact {
+            background: linear-gradient(135deg, rgba(44, 90, 160, 0.08) 0%, rgba(42, 157, 143, 0.08) 100%);
+            border: 2px solid var(--primary);
+            padding: 35px;
+            border-radius: var(--border-radius);
+            margin: 40px 0 20px;
+            text-align: center;
+        }
+
+        .email-contact h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+
+        .email-contact p {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .email-contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            font-size: 1.4rem;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            background: rgba(44, 90, 160, 0.1);
+        }
+
+        .email-contact a:hover {
+            color: var(--primary-dark);
+            background: rgba(44, 90, 160, 0.2);
+            text-decoration: none;
+        }
+
+        /* 联系方式部分 */
+        .contact-section {
+            margin-bottom: 100px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-light);
+        }
+
+        .contact-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(44, 90, 160, 0.1);
+        }
+
+        .contact-card-icon {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-right: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(44, 90, 160, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-card-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .contact-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-right: 15px;
+            min-width: 40px;
+            height: 40px;
+            background: rgba(44, 90, 160, 0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .contact-content p {
+            color: var(--text-medium);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-content ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .contact-content ul li {
+            margin-bottom: 8px;
+            padding-bottom: 0;
+            border-bottom: none;
+            color: var(--text-medium);
+        }
+
+        .contact-content a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .contact-content a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0 30px;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .copyright {
+            padding-top: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            section {
+                margin-bottom: 80px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .recruitment-full-card {
+                padding: 35px;
+            }
+            
+            .recruitment-full-card h3 {
+                font-size: 1.8rem;
+            }
+            
+            .email-contact p, .email-contact a {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.3rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero {
+                padding: 60px 0 80px;
+            }
+            
+            .section-header {
+                margin-bottom: 30px;
+            }
+            
+            .contact-card {
+                padding: 30px;
+            }
+            
+            .contact-card-icon {
+                font-size: 1.8rem;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .contact-card-title {
+                font-size: 1.4rem;
+            }
+            
+            .recruitment-full-card h3 {
+                font-size: 1.6rem;
+            }
+            
+            .recruitment-content h4 {
+                font-size: 1.3rem;
+            }
+            
+            .email-contact {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.9rem;
+            }
+            
+            section {
+                margin-bottom: 60px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card, .publication-item, .area-item {
+                padding: 25px;
+            }
+            
+            .highlight-box, .recruitment-box {
+                padding: 20px;
+            }
+            
+            .contact-card {
+                padding: 25px;
+            }
+            
+            .contact-list li {
+                flex-direction: column;
+            }
+            
+            .contact-icon {
+                margin-bottom: 15px;
+            }
+            
+            .recruitment-full-card {
+                padding: 25px;
+            }
+            
+            .recruitment-full-card h3 {
+                font-size: 1.5rem;
+            }
+            
+            .recruitment-content h4 {
+                font-size: 1.2rem;
+            }
+            
+            .email-contact {
+                padding: 20px;
+            }
+            
+            .email-contact h4 {
+                font-size: 1.3rem;
+            }
+            
+            .email-contact p, .email-contact a {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        /* 列表样式 */
+        ul {
+            color: var(--text-medium);
+        }
+        
+        li {
+            color: var(--text-medium);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        /* 强调文本 */
+        strong {
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-graduation-cap"></i> 杨玉宽
+                </a>
+                <nav class="nav-links">
+                    <a href="#about" class="active">关于</a>
+                    <a href="#research">研究方向</a>
+                    <a href="#experience">教育经历</a>
+                    <a href="#publications">学术成果</a>
+                    <a href="#recruitment">招生招聘</a>
+                    <a href="#contact">联系</a>
+                </nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>杨玉宽</h1>
+                    <h2>Yang Yukuan, Ph.D.</h2>
+                    <div class="title">
+                        <i class="fas fa-map-marker-alt"></i> 中国科学院软件研究所 · 副研究员
+                    </div>
+                    <p>
+                        专注于<strong>具身智能、世界模型与自动驾驶</strong>的前沿研究，在<strong>软件工程大模型、智能交通系统</strong>等领域具有长期研究积累。致力于推动人工智能前沿技术的创新与产业化应用。
+                    </p>
+                    
+                    <div class="highlight-box">
+                        <i class="fas fa-award"></i>主持国家级及省部级项目5项 · 总经费超430万元
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <i class="fas fa-file-alt"></i>在NeurIPS、AAAI、IEEE T-ITS、Neural Networks等顶级会议和期刊发表论文
+                    </div>
+                    
+                    <div class="recruitment-box">
+                        <h3><i class="fas fa-user-graduate"></i> 长期招收实习生/研究生</h3>
+                        <p>欢迎对以下研究方向感兴趣的本科生、硕士生和博士生加入课题组：</p>
+                        <ul>
+                            <li><strong>具身智能与机器人学习</strong>：多模态感知、机器人操作与导航</li>
+                            <li><strong>世界模型与强化学习</strong>：场景理解、预测与决策</li>
+                            <li><strong>自动驾驶系统</strong>：感知、规划与控制一体化</li>
+                            <li><strong>软件工程大模型</strong>：代码生成、测试与维护</li>
+                        </ul>
+                        <p>提供完整的科研训练，指导发表高水平论文，优秀者支持深造推荐。</p>
+                    </div>
+                </div>
+                
+                <div class="hero-profile">
+                    <div class="profile-img">
+                        <img src="./yangyk.png" alt="杨玉宽 头像">
+                    </div>
+                    <div class="profile-name">杨玉宽</div>
+                    <div class="profile-title">副研究员 | 中国科学院软件研究所</div>
+                    <div class="profile-tags">
+                        <span class="tag">具身智能</span>
+                        <span class="tag">世界模型</span>
+                        <span class="tag">自动驾驶</span>
+                        <span class="tag">软件工程大模型</span>
+                    </div>
+                    <div class="profile-links">
+                        <a href="https://github.com/yang-yk" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:yangyukuan@iscas.ac.cn" title="邮箱">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="#" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="research">
+            <div class="section-header">
+                <h2>研究方向</h2>
+                <p class="section-subtitle">聚焦具身智能、世界模型、自动驾驶和软件工程大模型的前沿交叉研究</p>
+            </div>
+            
+            <div class="areas-grid">
+                <div class="area-item fade-in">
+                    <i class="fas fa-robot area-icon"></i>
+                    <h3 class="area-title">具身智能</h3>
+                    <p class="card-content">研究具身智能体在物理环境中的多模态感知、交互与学习，探索机器人操作、导航与任务执行能力。</p>
+                </div>
+                
+                <div class="area-item fade-in">
+                    <i class="fas fa-globe area-icon"></i>
+                    <h3 class="area-title">世界模型</h3>
+                    <p class="card-content">构建和理解环境的世界模型，研究场景理解、状态预测与决策生成，实现智能体的长期规划能力。</p>
+                </div>
+                
+                <div class="area-item fade-in">
+                    <i class="fas fa-car area-icon"></i>
+                    <h3 class="area-title">自动驾驶</h3>
+                    <p class="card-content">自动驾驶系统的感知、规划与控制一体化研究，包括复杂场景理解、决策制定与安全验证。</p>
+                </div>
+                
+                <div class="area-item fade-in">
+                    <i class="fas fa-code area-icon"></i>
+                    <h3 class="area-title">软件工程大模型</h3>
+                    <p class="card-content">研究面向软件工程的大模型应用，包括代码生成、程序理解、软件测试与维护自动化。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats">
+            <div class="section-header">
+                <h2>研究成果概览</h2>
+                <p class="section-subtitle">在科研项目、学术发表和知识产权等方面取得的代表性成果</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">主持项目</div>
+                    <div class="stat-meta">国家自然科学基金/军委装发/北京市自然科学基金等</div>
+                </div>
+                
+                <div class="stat-item fade-in">
+                    <div class="stat-number">430+</div>
+                    <div class="stat-label">总经费（万元）</div>
+                    <div class="stat-meta">科研与工程项目</div>
+                </div>
+                
+                <div class="stat-item fade-in">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">发表论文</div>
+                    <div class="stat-meta">NeurIPS/AAAI/IEEE T-ITS等顶级会议期刊</div>
+                </div>
+                
+                <div class="stat-item fade-in">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">国家发明专利</div>
+                    <div class="stat-meta">已授权3项</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header">
+                <h2>教育背景与工作经历</h2>
+                <p class="section-subtitle">从清华大学到中国科学院软件研究所的学术与职业发展历程</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="timeline">
+                        <div class="timeline-item fade-in">
+                            <div class="timeline-date">2013.09 - 2017.07</div>
+                            <h3 class="timeline-title">清华大学 · 精密仪器系</h3>
+                            <div class="timeline-subtitle">学士 · 测控技术与仪器</div>
+                        </div>
+                        
+                        <div class="timeline-item fade-in">
+                            <div class="timeline-date">2017.09 - 2022.07</div>
+                            <h3 class="timeline-title">清华大学 · 类脑计算研究中心</h3>
+                            <div class="timeline-subtitle">博士 · 仪器科学与技术（导师：李国齐（国家杰青））</div>
+                        </div>
+                        
+                        <div class="timeline-item fade-in">
+                            <div class="timeline-date">2022.08 - 2025.11</div>
+                            <h3 class="timeline-title">中国科学院软件研究所</h3>
+                            <div class="timeline-subtitle">博士后研究员</div>
+                        </div>
+                        
+                        <div class="timeline-item fade-in">
+                            <div class="timeline-date">2025.11 - 至今</div>
+                            <h3 class="timeline-title">中国科学院软件研究所</h3>
+                            <div class="timeline-subtitle">副研究员</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <div class="section-header">
+                <h2>代表性学术成果</h2>
+                <p class="section-subtitle">在人工智能、自动驾驶和软件工程领域的代表性学术论文</p>
+            </div>
+            
+            <div class="publications-list">
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">AuthSim: Towards Authentic and Effective Safety-critical Scenario Generation for Autonomous Driving Tests</h3>
+                    <div class="publication-authors">Y. Yang et al.</div>
+                    <span class="publication-venue">IEEE Transactions on Intelligent Transportation Systems, 2025</span>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Hybrid-Driving: An Autonomous Driving Decision Framework Integrating Large Language Models, Knowledge Graphs and Driving Rules</h3>
+                    <div class="publication-authors">J. Wang, Z. Wu, Q. Dong, L. Meng, Y. Xue, <strong>Y. Yang*</strong></div>
+                    <span class="publication-venue">AAAI Conference on Artificial Intelligence, 2025</span>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Network Group Partition and Core Placement Optimization for Neuromorphic Multi-Core and Multi-Chip Systems</h3>
+                    <div class="publication-authors">Y. Yang et al.</div>
+                    <span class="publication-venue">IEEE Transactions on Emerging Topics in Computational Intelligence, 2024</span>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Towards efficient full 8-bit integer DNN online training on resource-limited devices without batch normalization</h3>
+                    <div class="publication-authors">Y. Yang et al.</div>
+                    <span class="publication-venue">Neurocomputing, 2022</span>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Training high-performance and large-scale deep neural networks with full 8-bit integers</h3>
+                    <div class="publication-authors">Y. Yang et al.</div>
+                    <span class="publication-venue">Neural Networks, 2020</span>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Restoring negative information in few-shot object detection</h3>
+                    <div class="publication-authors">Y. Yang et al.</div>
+                    <span class="publication-venue">NeurIPS, 2020</span>
+                </div>
+                
+                <div class="publication-item fade-in">
+                    <h3 class="publication-title">Transfer learning in general lensless imaging through scattering media</h3>
+                    <div class="publication-authors">Y. Yang et al.</div>
+                    <span class="publication-venue">ICIEA, 2020</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="recruitment">
+            <div class="section-header">
+                <h2>招生与招聘</h2>
+                <p class="section-subtitle">欢迎加入课题组，共同探索人工智能前沿领域</p>
+            </div>
+            
+            <div class="recruitment-full-card fade-in">
+                <h3><i class="fas fa-user-graduate"></i> 招聘信息</h3>
+                
+                <div class="recruitment-content">
+                    <h4>实习生招聘</h4>
+                    <p><strong>招收对象：</strong>本科生、硕士生、博士（长期有效）</p>
+                    <p><strong>申请要求：</strong></p>
+                    <ul>
+                        <li>对人工智能研究有浓厚兴趣</li>
+                        <li>具备编程基础（Python/C++）</li>
+                        <li>有机器学习/深度学习基础者优先</li>
+                        <li>每周能保证至少32小时科研时间</li>
+                    </ul>
+                    <p><strong>实习收获：</strong></p>
+                    <ul>
+                        <li>参与前沿科研项目，积累研究经验</li>
+                        <li>指导发表学术论文（CV/ML顶会）</li>
+                        <li>提供实习证明和推荐信</li>
+                        <li>表现优异者可转为研究生或获得深造推荐</li>
+                    </ul>
+                    
+                    <h4>博士后招聘</h4>
+                    <p><strong>研究方向：</strong></p>
+                    <ul>
+                        <li>具身智能与机器人学习</li>
+                        <li>世界模型与决策规划</li>
+                        <li>自动驾驶系统安全验证</li>
+                        <li>大模型在软件工程中的应用</li>
+                    </ul>
+                    <p><strong>申请条件：</strong></p>
+                    <ul>
+                        <li>已获得或即将获得博士学位</li>
+                        <li>在相关领域发表过高水平论文</li>
+                        <li>具备独立科研能力和团队协作精神</li>
+                    </ul>
+                    <p><strong>待遇支持：</strong></p>
+                    <ul>
+                        <li>具有竞争力的薪酬待遇</li>
+                        <li>充足的科研经费支持</li>
+                        <li>协助申请各类人才项目</li>
+                        <li>优秀的出站留所机会</li>
+                    </ul>
+                </div>
+                
+                <div class="email-contact">
+                    <h4><i class="fas fa-envelope"></i> 申请方式</h4>
+                    <p>请联系并发简历至：<a href="mailto:yangyukuan@iscas.ac.cn">yangyukuan@iscas.ac.cn</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2>联系方式</h2>
+                <p class="section-subtitle">欢迎联系与合作</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- 项目合作卡片 -->
+                <div class="contact-card fade-in">
+                    <div class="contact-card-header">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="contact-card-title">项目合作</h3>
+                    </div>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>合作领域</h4>
+                                <p>欢迎与学术界和工业界同行在以下领域开展合作：</p>
+                                <ul>
+                                    <li>具身智能与机器人系统</li>
+                                    <li>自动驾驶与智能交通</li>
+                                    <li>世界模型与强化学习</li>
+                                    <li>软件工程大模型应用</li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>团队指导</h4>
+                                <p>指导实验室近20名研究生科研工作，欢迎优秀学生报考。提供完整的科研训练体系，支持高水平论文发表。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 联系信息卡片 -->
+                <div class="contact-card fade-in">
+                    <div class="contact-card-header">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-address-card"></i>
+                        </div>
+                        <h3 class="contact-card-title">联系信息</h3>
+                    </div>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>工作单位</h4>
+                                <p>中国科学院软件研究所</p>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>电子邮箱</h4>
+                                <p>yangyukuan@iscas.ac.cn</p>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>GitHub</h4>
+                                <p>github.com/yang-yk</p>
+                                <p style="margin-top: 5px;">最新论文、项目及开源代码请访问GitHub主页。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="current-year"></span> 杨玉宽 (Yang Yukuan)</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // 设置当前年份
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // 滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // 观察所有需要动画的元素
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // 移动端菜单
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+            
+            // 调整窗口大小时重置菜单
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 992) {
+                    navLinks.style.display = 'flex';
+                } else {
+                    navLinks.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
